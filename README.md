@@ -30,7 +30,7 @@ The trading idea is merely Enter/Exit rules, without any risk/money management a
  - Do you have a similar work for trading strategies? Not, yet. And it won't be free and open source, too.
  - What's the scientific background of this work? Mainly applied statistics.
  - Any reference about this method? The book "Evidence-based Technical Analysis".
- - Why you do this? Because I like it, and have enough money to devote my time on quantitative trading strategy development, completely!
+ - Why you do this? Because I like it, and I can devote my time on quantitative trading strategy development, completely!
  - Who are you? See the next section.
 
 # Who am I?
@@ -38,4 +38,4 @@ The trading idea is merely Enter/Exit rules, without any risk/money management a
  - A software engineer.
  - A full-time algo trader.
  - An Instructor and mentor of crypto algo trading.
- - Creator of https://quantct.com
+ - Creator of https://quantct.com (Under Construction ...)
