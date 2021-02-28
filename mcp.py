@@ -14,9 +14,8 @@ def perform_mcp(idea_name, asset_name='BTCUSDT', csv_filename='BTCUSDT_1d', pd_t
     trades, df_rets = runner_method('BTCUSDT',
                                     csvFilePath=fullname, 
                                     pandasTimeFrame=pd_timeframe, 
-                                    ema1_period=10, 
-                                    ema2_period=20, 
-                                    ema3_period=30)
+                                    long_period=10, 
+                                    short_period=5)
     
     df_data = df_data.tail(df_rets.shape[0]+1)  
     
@@ -58,7 +57,8 @@ def get_data_frame(filePath = "data\\BTCUSDT_1d.csv"):
 def get_runner_method(idea_name):
 
     runner_methods = {
-        'AS001':backtester.run_AS001
+        'AS001':backtester.run_AS001,
+        'AS002':backtester.run_AS002
     }
 
     return runner_methods[idea_name]

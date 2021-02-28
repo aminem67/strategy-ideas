@@ -1,0 +1,18 @@
+=== Performance Summary (AS002: BTCUSDT) ===
+Final portfolio value: $145855.17
+Cumulative returns: 45.86 %
+Anualized Sharpe ratio: 1.54
+Max. drawdown: 3.94 %
+Longest drawdown duration: 307 days, 0:00:00
+
+=== Trades Summary (AS002: BTCUSDT) ===
+Total trades: 88
+Winning trades: 35
+Losing trades: 53
+Avg. return: 2.71 %
+Returns std. dev.: 10.19 %
+Max. return: 43.11 %
+Min. return: -10.22 %
+Avg. profit: $305
+Max. profit: $10653
+Min. profit: $-1211

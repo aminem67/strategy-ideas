@@ -1,0 +1,27 @@
+// This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © QuantCT
+
+//@version=4
+strategy("AS002 Idea",
+         shorttitle="AS002", 
+         overlay=true,
+         pyramiding=0,     
+         default_qty_type=strategy.fixed, 
+         default_qty_value=1.0, 
+         initial_capital=100000,           
+         commission_type=strategy.commission.percent, 
+         commission_value=0.075)
+
+long_period = input(title="Long MOM Period", defval=10)
+short_period = input(title="Short MOM Period", defval=5)
+
+mom_long = mom(close, long_period)
+mom_short = mom(close, short_period)
+
+buy_condition = (mom_long > 0 and mom_short > 0)
+sell_condition = (mom_long < 0 or mom_short < 0)
+
+strategy.entry("Buy", strategy.long, when=buy_condition)
+strategy.close("Buy", when=sell_condition)
+
+

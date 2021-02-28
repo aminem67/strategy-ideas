@@ -5,7 +5,7 @@ from pyalgotrade.barfeed import csvfeed
 from pyalgotrade.stratanalyzer import returns, sharpe, drawdown, trades
 from pyalgotrade import plotter
 
-from python import AS001
+from python import AS001, AS002
 from util import get_pandas_timeframe_frequency
 
 # %% Runner methods
@@ -27,6 +27,25 @@ def run_AS001(asset,
 
     # Evaluate the strategy with the feed.
     strategy = AS001.AS001Strategy(feed, asset, ema1_period, ema2_period, ema3_period)           
+    
+    return run_analyze_plot(strategyName, strategy, asset, feed)
+
+def run_AS002(asset, 
+              csvFilePath, 
+              pandasTimeFrame, 
+              long_period, 
+              short_period):
+    
+    strategyName = 'AS002: {}'.format(asset)
+
+    freq = get_pandas_timeframe_frequency(pandasTimeFrame)
+        
+    # Load the bar feed from the CSV file
+    feed = csvfeed.GenericBarFeed(frequency=freq, maxLen=10000000)
+    feed.addBarsFromCSV(asset, csvFilePath)    
+
+    # Evaluate the strategy with the feed.
+    strategy = AS002.AS002Strategy(feed, asset, long_period, short_period)           
     
     return run_analyze_plot(strategyName, strategy, asset, feed)
 
