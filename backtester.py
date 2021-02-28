@@ -83,7 +83,7 @@ def print_performance_results(name, strategy, returnsAnalyzer, sharpeRatioAnalyz
     """"""
 
     print("")
-    print('=== Performance Summery ({}) ==='.format(name))
+    print('=== Performance Summary ({}) ==='.format(name))
     print("Final portfolio value: $%.2f" % strategy.getResult())
     print("Cumulative returns: %.2f %%" % (returnsAnalyzer.getCumulativeReturns()[-1] * 100))    
     print("Anualized Sharpe ratio: %.2f" % (sharpeRatioAnalyzer.getSharpeRatio(riskFreeRate=0, annualized=True)))
@@ -91,7 +91,7 @@ def print_performance_results(name, strategy, returnsAnalyzer, sharpeRatioAnalyz
     print("Longest drawdown duration: %s" % (drawDownAnalyzer.getLongestDrawDownDuration()))    
     
     print("")
-    print('=== Trades Summery ({}) ==='.format(name))
+    print('=== Trades Summary ({}) ==='.format(name))
     print("Total trades: %d" % (tradesAnalyzer.getCount()))
     print("Winning trades: %d" % (tradesAnalyzer.getProfitableCount()))
     print("Losing trades: %d" % (tradesAnalyzer.getUnprofitableCount()))
