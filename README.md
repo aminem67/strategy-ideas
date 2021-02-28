@@ -15,8 +15,9 @@ The HEP here is 0.05 p-value, 0.95 significanse, above "+2 x Sigma" of histogram
 In addition, and built from those "Yes/No"s, we will have a valubale knowledge base of many trading ideas that PROBABLY won't work, along with some PROBABLY profitable ones!
 
 # How ideas are tested?
-All ideas are backtested on cryptos (mainly BTCUSDT) starting from 2018-01-01 (a big and available market crash on Binance exchange) to mid 2021-02. Test details are as follows:
- - A backtest is performed on the data mentioned above. Timeframe is based on what the idea suggests.
+All ideas are backtested on BTCUSDT starting from 2018-01-01 (a big and available market crash on Binance exchange) to mid 2021-02. Test details are as follows:
+ - All tests have $ 100K on initial cash, and the order amount is 1 BTC.
+ - A backtest is performed on the data mentioned above. Timeframe is based on what the idea suggests. 
  - Applying "Monte Carlo Permutation" (MCP) test with 10,000 random (i.e. non profitable) tests on same data.
  - Giving a Yes, if the mean return of the implemented idea is above "+2 x Sigma" of histogram of mean returns of those 10K random tests, and a No otherwise.
 
