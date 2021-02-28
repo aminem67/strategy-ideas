@@ -2,13 +2,13 @@
 // © QuantCT
 
 //@version=4
-strategy("PMA Strategy",
-         shorttitle="PMA", 
+strategy("AS001 Idea",
+         shorttitle="AS001", 
          overlay=true,
          pyramiding=0,     
-         default_qty_type=strategy.percent_of_equity, 
-         default_qty_value=100, 
-         initial_capital=100,           
+         default_qty_type=strategy.fixed, 
+         default_qty_value=1.0, 
+         initial_capital=100000,           
          commission_type=strategy.commission.percent, 
          commission_value=0.075)
 
